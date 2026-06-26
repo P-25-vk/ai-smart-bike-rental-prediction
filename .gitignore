@@ -1,0 +1,49 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# ========================
+# ML Model & Data Files
+# ========================
+backend/bike_model.pkl
+backend/bike_rental.csv
+backend/eda_plots/
+backend/*.png
+
+# ========================
+# Node / React
+# ========================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# ========================
+# Logs
+# ========================
+*.log
+npm-debug.log*
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE
+# ========================
+.vscode/
+.idea/
+*.swp

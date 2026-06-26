@@ -1,0 +1,20 @@
+[Unit]
+Description=Smart Bike Rental — Gunicorn Flask Backend
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/bike-rental/backend
+EnvironmentFile=/home/ubuntu/bike-rental/backend/.env
+ExecStart=/home/ubuntu/bike-rental/backend/venv/bin/gunicorn \
+    --workers 4 \
+    --bind 0.0.0.0:5000 \
+    --timeout 120 \
+    --access-logfile /var/log/bikerental-access.log \
+    --error-logfile  /var/log/bikerental-error.log \
+    app:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
